@@ -1,5 +1,7 @@
 # Atelier Lumin (Nome Fictício)
 
+**Produção:** https://d2ashe5dcuj3hd.cloudfront.net
+
 Landing page institucional minimalista e elegante para salão / espaço de beleza. Código pronto para abrir localmente em qualquer navegador (HTML, CSS e JS puros). Substitua facilmente marca, paleta e imagens.
 
 ## Visão Geral
@@ -70,6 +72,25 @@ Validação simples (required + email). Mensagens de feedback por campo e status
 - SEO: revisar `alt` com contexto real (evitar termos genéricos).
 
 ## Deploy
+### AWS S3 + CloudFront (Produção Atual)
+Este projeto está publicado atualmente via bucket S3 (site estático) distribuído na CDN do CloudFront.
+
+Fluxo utilizado:
+1. Criado bucket S3 público apenas para conteúdo estático (ou com acesso restrito via OAC + CloudFront).
+2. Upload dos arquivos `index.html`, `styles.css`, `main.js` e ativos (imagens, favicon, etc.).
+3. Configurado CloudFront Distribution apontando para o bucket (Origin Access Control recomendado para evitar acesso público direto ao S3).
+4. Definido `index.html` como Default Root Object.
+5. Invalidações: ao atualizar assets críticos, executar invalidation de `/*` ou caminhos específicos (ex: `/styles.css`, `/main.js`).
+6. (Opcional) Adicionar domínio custom (Route53) + certificado ACM (Region us-east-1) e configurar CNAME na distribuição.
+
+Headers / boas práticas sugeridos no CloudFront:
+- Cache HTML curto (ex: `Cache-Control: max-age=300, must-revalidate`).
+- Cache agressivo para CSS/JS versão com hash (ex: `max-age=31536000, immutable`).
+- Ativar GZIP + Brotli.
+- Adicionar Security Headers via Function@Edge ou Lambda@Edge (CSP, X-Content-Type-Options, Referrer-Policy, Permissions-Policy).
+
+URL atual em produção: `https://d2ashe5dcuj3hd.cloudfront.net`
+
 ### GitHub Pages
 1. Criar repositório e fazer commit dos arquivos.
 2. Settings → Pages → Fonte = branch `main` / root.
