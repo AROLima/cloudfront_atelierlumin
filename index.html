@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- SEO Básico & Config -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atelier Lumin | Beleza, Cuidado e Elegância</title>
+    <meta name="description"
+        content="Atelier Lumin: salão de beleza boutique com serviços de corte, coloração, tratamentos capilares e estética. Elegância minimalista para realçar sua luz." />
+    <meta name="robots" content="index,follow" />
+    <meta name="author" content="Atelier Lumin" />
+    <link rel="canonical" href="https://example.com/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Atelier Lumin" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Atelier Lumin" />
+    <meta property="og:description" content="Beleza boutique: serviços de corte, coloração, tratamentos e estética." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=60" />
+    <meta name="theme-color" content="#f8f5f2" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Favicon simples (pode substituir por arquivo real) -->
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23c07a5f'/%3E%3Ctext x='32' y='38' font-size='28' text-anchor='middle' font-family='Arial' fill='white'%3EAL%3C/text%3E%3C/svg%3E"
+        type="image/svg+xml" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BeautySalon",
+            "name": "Atelier Lumin",
+            "url": "https://example.com/",
+            "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=60",
+            "logo": "https://example.com/logo.png",
+            "description": "Salão boutique de beleza, corte, coloração e tratamentos capilares.",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Exemplo, 123",
+                "addressLocality": "Cidade",
+                "addressRegion": "UF",
+                "postalCode": "00000-000",
+                "addressCountry": "BR"
+            },
+            "telephone": "+55-99-99999-9999",
+            "priceRange": "$$",
+            "openingHoursSpecification": [{
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "09:00",
+                "closes": "19:00"
+            }]
+        }
+        </script>
+
+    <!-- Fallback caso JS desabilitado (exibe aviso leve) -->
+    <noscript>
+        <style>
+            .no-js-note {
+                background: #f5d7d7;
+                color: #5a1212;
+                padding: .75rem;
+                text-align: center;
+                font-size: .85rem
+            }
+
+            .animate-on-load {
+                opacity: 1 !important;
+                transform: none !important
+            }
+        </style>
+        <div class="no-js-note" role="note">Algumas animações e interações estão desativadas porque o JavaScript está
+            desligado.</div>
+    </noscript>
+</head>
+
+<body>
+    <!-- Barra de progresso do scroll (animada via JS) -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"><span class="scroll-progress-bar"></span></div>
+    <!-- Skip link para acessibilidade -->
+    <a href="#conteudo" class="skip-link">Pular para conteúdo</a>
+
+    <!-- Header / Navegação -->
+    <header id="site-header" class="site-header" role="banner">
+        <div class="container header-inner">
+            <div class="brand" aria-label="Marca / Logo">
+                <!-- Substituir por logotipo real (SVG preferencial) -->
+                <a href="#" class="logo" data-replace="logo-nome">Atelier Lumin</a>
+            </div>
+            <nav class="main-nav" aria-label="Menu principal">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="#contato" class="btn btn-small">Agendar</a>
+                <button id="theme-toggle" class="btn btn-small" type="button" aria-pressed="false"
+                    aria-label="Alternar tema">🌓</button>
+            </div>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="menu-mobile"
+                aria-label="Abrir menu">☰</button>
+        </div>
+        <div id="menu-mobile" class="menu-mobile" hidden>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <!-- Hero -->
+        <section id="inicio" class="hero hero--full" aria-labelledby="hero-heading">
+            <div class="hero-bg" aria-hidden="true">
+                <picture class="hero-picture">
+                    <!-- Substitua futuramente por foto autoral/otimizada. Unsplash placeholder semanticamente adequado. -->
+                    <source type="image/avif"
+                        srcset="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=960&h=540&q=60&lossless=1&fm=avif 960w,
+                                     https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1280&h=720&q=60&lossless=1&fm=avif 1280w,
+                                     https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1920&h=1080&q=70&lossless=1&fm=avif 1920w"
+                        sizes="(max-width: 700px) 100vw, 100vw" />
+                    <source type="image/webp"
+                        srcset="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=960&h=540&q=60&fm=webp 960w,
+                                     https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1280&h=720&q=60&fm=webp 1280w,
+                                     https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1920&h=1080&q=70&fm=webp 1920w"
+                        sizes="(max-width: 700px) 100vw, 100vw" />
+                    <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1920&h=1080&q=70"
+                        srcset="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=960&h=540&q=60 960w,
+                                 https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1280&h=720&q=60 1280w,
+                                 https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1920&h=1080&q=70 1920w"
+                        sizes="(max-width: 700px) 100vw, 100vw"
+                        alt="Ambiente de salão boutique iluminado com profissional preparando atendimento" width="1920"
+                        height="1080" loading="eager" fetchpriority="high" />
+                </picture>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-layer-decor" aria-hidden="true">
+                <div class="hero-decor">
+                    <div class="blob blob-1"></div>
+                    <div class="blob blob-2"></div>
+                    <div class="blob blob-3"></div>
+                </div>
+            </div>
+            <div class="hero-content-wrapper container">
+                <div class="hero-content">
+                    <h1 id="hero-heading" class="hero-title animate-on-load">
+                        Beleza Autêntica, <span class="gradient-text">Luz Interior</span>
+                    </h1>
+                    <p class="hero-subtitle animate-on-load">Experiências de cuidado que realçam sua essência com toques
+                        artísticos e
+                        sustentáveis.</p>
+                    <div class="hero-cta animate-on-load">
+                        <a href="#servicos" class="btn primary">Ver Serviços</a>
+                        <a href="#contato" class="btn outline">Agendar Consulta</a>
+                    </div>
+                    <ul class="hero-stats animate-on-load" aria-label="Nossos diferenciais em números">
+                        <li><strong data-counter data-target="10">0</strong><span>Anos de expertise</span></li>
+                        <li><strong data-counter data-target="2500">0</strong><span>Clientes satisfeitos</span></li>
+                        <li><strong data-counter data-target="35">0</strong><span>Prêmios & reconhecimentos</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre" class="sobre section reveal" aria-labelledby="titulo-sobre">
+            <div class="container narrow">
+                <h2 id="titulo-sobre" class="section-title">Sobre Nós</h2>
+                <p>Somos um espaço dedicado à beleza consciente, com foco em técnicas modernas, produtos de alta
+                    performance e um atendimento que respeita a identidade de cada pessoa.</p>
+                <p>Nossa abordagem combina consultoria personalizada, ambiente sensorial e resultados que valorizam a
+                    autenticidade.</p>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section id="servicos" class="servicos section reveal" aria-labelledby="titulo-servicos">
+            <div class="container">
+                <h2 id="titulo-servicos" class="section-title">Serviços</h2>
+                <p class="section-intro">Seleção curada para cuidado integral. Tratamentos sob consulta personalizada.
+                </p>
+                <div class="servicos-grid">
+                    <!-- Cada card terá animação on-scroll -->
+                    <article class="servico-card" aria-label="Corte & Styling">
+                        <h3>Corte & Styling</h3>
+                        <p>Visagismo, cortes estruturados e finalizações que respeitam movimento natural.</p>
+                    </article>
+                    <article class="servico-card" aria-label="Coloração Inteligente">
+                        <h3>Coloração Inteligente</h3>
+                        <p>Personalização de tons, luminosidade e saúde dos fios com técnica avançada.</p>
+                    </article>
+                    <article class="servico-card" aria-label="Tratamentos Capilares">
+                        <h3>Tratamentos Capilares</h3>
+                        <p>Protocolos nutritivos e reconstrutores com diagnóstico profissional.</p>
+                    </article>
+                    <article class="servico-card" aria-label="Maquiagem & Expressão">
+                        <h3>Maquiagem & Expressão</h3>
+                        <p>Looks leves a editoriais, sempre respeitando traços e ocasião.</p>
+                    </article>
+                    <article class="servico-card" aria-label="Noivas & Eventos">
+                        <h3>Noivas & Eventos</h3>
+                        <p>Planejamento estético completo para momentos marcantes.</p>
+                    </article>
+                    <article class="servico-card" aria-label="Estética Facial">
+                        <h3>Estética Facial</h3>
+                        <p>Cuidados de pele focados em equilíbrio e luminosidade.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria / Portfolio -->
+        <section id="galeria" class="galeria section reveal" aria-labelledby="titulo-galeria">
+            <div class="container">
+                <h2 id="titulo-galeria" class="section-title">Galeria & Resultados</h2>
+                <p class="section-intro">Transformações e processos. Imagens meramente ilustrativas.</p>
+                <div class="galeria-grid" role="list">
+                    <!-- Placeholder images (substituir por imagens otimizadas) -->
+                    <figure class="galeria-item" role="listitem">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=60"
+                            srcset="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=300&q=60 300w,
+                                    https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=60 600w"
+                            sizes="(max-width: 600px) 50vw, 200px" width="600" height="750"
+                            alt="Cabelo curto estilizado" loading="lazy" />
+                        <figcaption>Corte Moderno</figcaption>
+                    </figure>
+                    <figure class="galeria-item" role="listitem">
+                        <img src="https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&w=600&q=60"
+                            srcset="https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&w=300&q=60 300w,
+                                    https://images.unsplash.com/photo-1522336572468-97b06e8ef143?auto=format&fit=crop&w=600&q=60 600w"
+                            sizes="(max-width: 600px) 50vw, 200px" width="600" height="750" alt="Coloração iluminada"
+                            loading="lazy" />
+                        <figcaption>Coloração</figcaption>
+                    </figure>
+                    <figure class="galeria-item" role="listitem">
+                        <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=60"
+                            srcset="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=300&q=60 300w,
+                                    https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=60 600w"
+                            sizes="(max-width: 600px) 50vw, 200px" width="600" height="750" alt="Penteado para evento"
+                            loading="lazy" />
+                        <figcaption>Penteado</figcaption>
+                    </figure>
+                    <figure class="galeria-item" role="listitem">
+                        <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=600&q=60"
+                            srcset="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=300&q=60 300w,
+                                    https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=600&q=60 600w"
+                            sizes="(max-width: 600px) 50vw, 200px" width="600" height="750" alt="Tratamento capilar"
+                            loading="lazy" />
+                        <figcaption>Tratamento</figcaption>
+                    </figure>
+                    <figure class="galeria-item" role="listitem">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=60"
+                            srcset="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=300&q=60 300w,
+                                    https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=60 600w"
+                            sizes="(max-width: 600px) 50vw, 200px" width="600" height="750" alt="Maquiagem profissional"
+                            loading="lazy" />
+                        <figcaption>Maquiagem</figcaption>
+                    </figure>
+                    <figure class="galeria-item" role="listitem">
+                        <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=600&q=60"
+                            srcset="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=300&q=60 300w,
+                                    https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=600&q=60 600w"
+                            sizes="(max-width: 600px) 50vw, 200px" width="600" height="750"
+                            alt="Ambiente interno aconchegante" loading="lazy" />
+                        <figcaption>Ambiente</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Modal simples para zoom da galeria -->
+            <div class="modal" id="modal-galeria" aria-hidden="true" role="dialog" aria-modal="true"
+                aria-label="Visualização ampliada">
+                <div class="modal-backdrop" data-close-modal></div>
+                <div class="modal-dialog" role="document">
+                    <button class="modal-close" aria-label="Fechar" data-close-modal>&times;</button>
+                    <figure class="modal-figure">
+                        <img src="" alt="Imagem ampliada" id="modal-img" />
+                        <figcaption id="modal-caption"></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="depoimentos" class="depoimentos section reveal" aria-labelledby="titulo-depoimentos">
+            <div class="container narrow">
+                <h2 id="titulo-depoimentos" class="section-title">Depoimentos</h2>
+                <div class="testimonial-slider" aria-roledescription="carousel" aria-label="Depoimentos de clientes">
+                    <div class="testimonial-track" role="list">
+                        <figure class="testimonial" role="group" aria-label="Depoimento 1">
+                            <blockquote>“Equipe acolhedora e resultado impecável. Senti minha identidade valorizada.”
+                            </blockquote>
+                            <figcaption>— Marina S.</figcaption>
+                        </figure>
+                        <figure class="testimonial" role="group" aria-label="Depoimento 2">
+                            <blockquote>“Consultoria detalhada e técnica elegante. Meu cabelo nunca esteve tão
+                                saudável.”</blockquote>
+                            <figcaption>— Paula R.</figcaption>
+                        </figure>
+                        <figure class="testimonial" role="group" aria-label="Depoimento 3">
+                            <blockquote>“Ambiente calmo, profissionalismo e estética refinada em cada etapa.”
+                            </blockquote>
+                            <figcaption>— Denise M.</figcaption>
+                        </figure>
+                    </div>
+                    <div class="testimonial-controls" aria-label="Controles do slider">
+                        <button type="button" class="btn btn-small testimonial-prev" aria-label="Anterior">◀</button>
+                        <button type="button" class="btn btn-small testimonial-playpause" aria-pressed="true"
+                            aria-label="Pausar autoplay">⏸</button>
+                        <button type="button" class="btn btn-small testimonial-next" aria-label="Próximo">▶</button>
+                    </div>
+                    <div class="testimonial-progress" aria-hidden="true"><span class="bar"></span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="contato section reveal" aria-labelledby="titulo-contato">
+            <div class="container">
+                <h2 id="titulo-contato" class="section-title">Contato & Agendamentos</h2>
+                <p class="section-intro">Envie uma mensagem ou use os canais diretos.</p>
+                <div class="contato-grid">
+                    <form id="form-contato" class="form" novalidate aria-describedby="contato-feedback">
+                        <div class="visually-hidden" aria-hidden="true">
+                            <label for="website">Se você é humano, deixe vazio</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+                        </div>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required autocomplete="name" />
+                            <span class="field-msg" data-field-msg="nome"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required autocomplete="email" />
+                            <span class="field-msg" data-field-msg="email"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                            <span class="field-msg" data-field-msg="mensagem"></span>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-submit-cta">Enviar</button>
+                            <p id="contato-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+                        </div>
+                    </form>
+                    <aside class="contato-aside" aria-label="Canais alternativos">
+                        <ul class="contact-channels">
+                            <li>Email: <a
+                                    href="mailto:contato@example.com?subject=Agendamento%20-%20utm_source=site">contato@example.com</a>
+                            </li>
+                            <li>WhatsApp: <a
+                                    href="https://wa.me/5599999999999?text=Quero%20agendar%20-%20utm_source=site"
+                                    target="_blank" rel="noopener">(99) 99999-9999</a></li>
+                            <li>Endereço: Rua Exemplo, 123 – Bairro – Cidade/UF</li>
+                            <li>Instagram: <a href="https://instagram.com/username" target="_blank"
+                                    rel="noopener">@username</a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="cta-final section reveal" aria-label="Chamada final">
+            <div class="container narrow">
+                <h2 class="section-title">Pronta(o) para uma experiência refinada?</h2>
+                <p>Agende uma consultoria e descubra possibilidades para realçar sua presença.</p>
+                <a href="#contato" class="btn btn-primary pulse-cta">Quero Agendar</a>
+            </div>
+        </section>
+
+        <!-- Indicadores / Estatísticas animadas -->
+        <section id="indicadores" class="stats section reveal" aria-label="Indicadores de experiência">
+            <div class="container stats-grid" data-observe-counters>
+                <div class="stat" aria-label="Clientes atendidos">
+                    <span class="stat-value" data-counter data-target="1200">0</span><span class="stat-suffix">+</span>
+                    <p>Clientes atendidos</p>
+                </div>
+                <div class="stat" aria-label="Protocolos personalizados">
+                    <span class="stat-value" data-counter data-target="350">0</span><span class="stat-suffix">+</span>
+                    <p>Protocolos personalizados</p>
+                </div>
+                <div class="stat" aria-label="Avaliação média">
+                    <span class="stat-value" data-counter data-target="4.9">0</span><span class="stat-suffix">★</span>
+                    <p>Avaliação média</p>
+                </div>
+                <div class="stat" aria-label="Anos de experiência">
+                    <span class="stat-value" data-counter data-target="8">0</span><span class="stat-suffix">+</span>
+                    <p>Anos de experiência</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-grid">
+            <div>
+                <h3 class="footer-logo serif" data-replace="logo-nome">Atelier Lumin</h3>
+                <p class="footer-tagline">Beleza consciente & estética refinada.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Links institucionais">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="footer-info">
+                <p>&copy; <span id="ano"></span> Atelier Lumin. Todos os direitos reservados.</p>
+                <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ratione l!
+                </p>
+            </div>
+        </div>
+        <!-- Instruções rápidas de customização:
+         1. Buscar por 'Atelier Lumin' e substituir pelo nome da marca.
+         2. Ajustar paleta em :root em styles.css (variáveis --color-*).
+         3. Substituir imagens (hero, galeria) por arquivos otimizados (WebP/AVIF + fallback JPG) e atualizar alt text.
+         4. Revisar meta description e og:tags no <head> com URL real.
+         5. Ajustar links de contato (mailto, WhatsApp) com números e parâmetros UTM reais.
+         6. Para remover animações: setar DISABLE_ANIMATIONS=true em main.js ou adicionar classe 'no-motion' no <body>.
+         7. Deploy: basta enviar estes arquivos para hosting estático (GitHub Pages, Netlify, Vercel). -->
+    </footer>
+
+    <!-- Scripts GSAP + App -->
+    <!-- GSAP (sem SRI para evitar mismatch de hash ao atualizar CDN); para produção fixe versão e gere SRI localmente -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+    <script src="main.js" defer></script>
+</body>
+
+</html>
